@@ -1,0 +1,101 @@
+body {
+    background-color: rgb(243, 243, 243);
+}
+
+footer {
+    margin: 0px;
+    padding: 20px;
+    box-sizing: content-box;
+    background-color: #363636;
+    
+}
+
+.footer {
+    font-family: "Tektur", sans-serif;
+    font-size: 24px;
+    color: rgb(243, 243, 243);
+}
+
+header {
+    margin: 30px;
+    padding: 0px;
+    box-sizing: content-box;
+  }
+
+main {
+    margin: 30px;
+    padding: 0px;
+    box-sizing: content-box;
+  }
+  
+nav {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+  }
+
+h1 {
+    font-family: "Tektur", sans-serif;
+    font-size: 64px;
+    color: #363636;
+  }
+
+h2 {
+    font-family: "Tektur", sans-serif;
+    font-size: 32px;
+    color: #363636;
+  }
+
+p {
+    font-family: "Tektur", sans-serif;
+    font-size: 24px;
+    color: #363636;
+  }
+
+ul {
+    font-family: "Tektur", sans-serif;
+    font-size: 24px;
+    color: #363636;
+    margin: 20px;
+    padding: 0px;
+  }
+
+th {
+    font-family: "Tektur", sans-serif;
+    font-size: 24px;
+    color: #363636;
+    border: 2px solid #363636;
+    padding: 5px;
+  }
+
+td {
+    font-family: "Tektur", sans-serif;
+    font-size: 24px;
+    color: #363636;
+    border: 2px solid #363636;
+    padding: 5px;
+  }
+
+img {
+    width: 1200px;
+    height: 750px;
+}
+
+table {
+    padding: 0px;
+    border: thin solid #363636;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Tektur", sans-serif;
+    font-size: 24px;
+    color: #363636;
+}
+
+a:hover {
+    color: rgb(0, 207, 93);
+}
+
