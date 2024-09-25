@@ -1,0 +1,85 @@
+
+.all_food { 
+    display: grid;
+    grid: auto-flow 1fr / repeat(3, 1fr);
+    column-gap: 10px;
+}
+
+@media (max-width: 800px) {
+    .all_food {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+}
+
+@media (max-width: 600px) {
+    .all_food {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    section>h2 {
+        text-align: center; 
+    }
+}
+
+.dish { 
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 35px;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    background-color: rgb(243, 243, 243);
+    flex-wrap: wrap;
+
+    overflow: hidden; /* Добавлено для скрытия части изображения при увеличении */
+    position: relative; /* Для правильного позиционирования изображения */
+    transition: transform 0.3s ease; /* Плавный переход */
+
+}
+
+.dish:hover { 
+    border: 2px solid tomato;
+}
+
+.dish>img {
+    width: 100%;
+    height: auto;
+    border-radius: 35px;
+    transition: transform 0.3s ease; /* Добавлено для плавного увеличения */
+}
+.dish:hover img{
+    transform: scale(1.2); /* Увеличение изображения при наведении */
+    
+}
+
+
+.name {
+    font-size: 20px;
+}
+.dish:hover .name{
+    font-size: 22px;
+}
+
+.weight {
+    font-size: 18px;
+}
+.dish:hover .weight {
+    color: #707070;
+}
+
+.dish>button {
+    border: none;
+    background-color: #f1eee9;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1px;
+}
+
+.dish:hover button {
+    background-color:tomato;
+}
+.dish>button:active {
+    background-color: rgb(243, 243, 243);
+}
+
