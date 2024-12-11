@@ -1,0 +1,311 @@
+.selected-dishes {
+    display: grid;
+    grid: auto-flow 1fr / repeat(3, 1fr);
+    column-gap: 10px;
+  }
+  
+  @media (max-width: 800px) {
+    .all_food {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .all_food {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  
+    section > h2 {
+      text-align: center;
+    }
+  }
+
+.dish {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  border-radius: 35px;
+  cursor: pointer;
+  filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+  background-color: rgb(243, 243, 243);
+  flex-wrap: wrap;
+
+  overflow: hidden; /* Добавлено для скрытия части изображения при увеличении */
+  position: relative; /* Для правильного позиционирования изображения */
+  transition: transform 0.3s ease; /* Плавный переход */
+}
+
+.dish:hover {
+  border: 2px solid tomato;
+}
+
+.dish.selected {
+  border: 2px solid tomato;
+}
+
+.dish > img {
+  width: 100%;
+  height: auto;
+  border-radius: 35px;
+  transition: transform 0.3s ease; /* Добавлено для плавного увеличения */
+}
+.dish:hover img {
+  transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+.dish.selected img {
+  transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+.name {
+  font-size: 20px;
+  
+  transition: all 0.3s ease;
+}
+.dish:hover .name {
+  font-size: 22px;
+}
+
+.dish.selected .name {
+  font-size: 22px;
+}
+
+.weight {
+  font-size: 18px;
+  
+  transition: all 0.3s ease;
+}
+.dish:hover .weight {
+  color: #707070;
+}
+
+.dish.selected .weight {
+  color: #707070;
+}
+
+.dish > button {
+  border: none;
+  background-color: #f1eee9;
+  font-family: 'Tektur', sans-serif;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1px;
+  
+  transition: all 0.3s ease;
+}
+
+.dish:hover button {
+  background-color: tomato;
+}
+
+.dish.selected button {
+  background-color: tomato;
+}
+
+.dish > button:active {
+  background-color: rgb(243, 243, 243);
+}
+
+.order-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.input-block {
+  width: 48%;
+  padding: 0px;
+}
+
+.order {
+  margin-top: 50px;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Tektur', sans-serif;
+  font-size: 24px;
+  color: #363636;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input-title,
+.nothing {
+  font-family: 'Tektur', sans-serif;
+  font-size: 20px;
+  color: #363636;
+  margin-bottom: 10px;
+}
+
+.dish-title,
+.total {
+  font-family: 'Tektur', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #363636;
+  margin-top: 0px;
+}
+
+.input-info {
+  font-size: 16px;
+  color: #666;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #666;
+  background-color: rgb(243, 243, 243);
+  filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.05));
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: 'Tektur', sans-serif;
+  font-size: 16px;
+  color: #363636;
+}
+
+label[for='newsletter'] {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+label[for='newsletter'] input {
+  margin: 0;
+  display: inline-block;
+}
+
+label[for='newsletter'] .input-title {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+label[for='newsletter'] {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+label[for='newsletter'] input {
+  margin: 0;
+  display: inline-block;
+}
+
+label[for='newsletter'] .input-title {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+label[for='asap'],
+label[for='specific-time'] {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delivery-time {
+  margin: 0;
+  display: inline-block;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset > label > span {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.buttons > button {
+  border: 1px solid #666;
+  background-color: rgb(243, 243, 243);
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1px;
+  
+  transition: all 0.3s ease;
+}
+
+.buttons > button:hover {
+  background-color: tomato;
+  border: 1px solid tomato;
+}
+.buttons > button:active {
+  background-color: rgb(243, 243, 243);
+  color: tomato;
+}
+
+.desert-note {
+  font-size: 20px;
+  color: #666;
+}
+
+#notification {
+  display: none; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(243, 243, 243);
+  border: 1px solid #363636;
+  padding: 20px;
+  width: 500px; 
+  text-align: center;
+  flex-direction: column;
+  box-shadow: 17px 19px 17px rgba(0, 0, 0, 0.09); 
+  z-index: 1000;
+  border-radius: 12px; 
+  font-family: 'Tektur', sans-serif; 
+}
+
+#notification p {
+  margin: 0;
+  padding: 10px;
+  font-size: 24px;
+  color: #363636;
+}
+
+#notification button {
+  border: none;
+  background-color: #f1eee9;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+#notification button:hover {
+  background-color: tomato;
+}
