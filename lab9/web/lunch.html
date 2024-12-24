@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Food Construct</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Веб-технологии Байкова Мария 231-3212" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="lunch.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Food Construct</h1>
+      <nav>
+        <a href="index.html">О нас</a>
+        <a href="#soups" class="active">Собрать ланч</a>
+        <a href="order.html">Оформить заказ</a>
+        <a href="history.html">Заказы</a>
+        <a href="#footer">Контакты</a>
+      </nav>
+    </header>
+    <main>
+      <section id="lunch-options">
+        <h2>Доступные для заказа комбо</h2>
+
+        <div class="lunch-options">
+          <div class="lunch-option">
+            <div class="lunch-dish">
+              <img src="img/soup.svg" alt="Суп" />
+              <p>Суп</p>
+            </div>
+            <div class="lunch-dish">
+              <img src="img/main.svg" alt="Главное блюдо" />
+              <p>Главное блюдо</p>
+            </div>
+            <div class="lunch-dish">
+              <img src="img/salad.png" alt="Салат" />
+              <p>Салат</p>
+            </div>
+            <div class="lunch-dish">
+              <img src="img/drink.svg" alt="Напиток" />
+              <p>Напиток</p>
+            </div>
+          </div>
+
+          <div class="lunch-option">
+            <div class="lunch-dish">
+              <img src="img/soup.svg" alt="Суп" />
+              <p>Суп</p>
+            </div>
+            <div class="lunch-dish">
+              <img src="img/main.svg" alt="Главное блюдо" />
+              <p>Главное блюдо</p>
+            </div>
+            <div class="lunch-dish">
+              <img src="img/drink.svg" alt="Напиток" />
+              <p>Напиток</p>
+            </div>
+          </div>
+
+          <div class="lunch-option">
+            <div class="lunch-dish">
+              <img src="img/soup.svg" alt="Суп" />
+              <p>Суп</p>
+            </div>
+            <div class="lunch-dish">
+              <img src="img/salad.png" alt="Салат" />
+              <p>Салат</p>
+            </div>
+            <div class="lunch-dish">
+              <img src="img/drink.svg" alt="Напиток" />
+              <p>Напиток</p>
+            </div>
+          </div>
+
+          <div class="lunch-option">
+            <div class="lunch-dish">
+              <img src="img/main.svg" alt="Главное блюдо" />
+              <p>Главное блюдо</p>
+            </div>
+            <div class="lunch-dish">
+              <img src="img/salad.png" alt="Салат" />
+              <p>Салат</p>
+            </div>
+            <div class="lunch-dish">
+              <img src="img/drink.svg" alt="Напиток" />
+              <p>Напиток</p>
+            </div>
+          </div>
+
+          <div class="lunch-option">
+            <div class="lunch-dish">
+              <img src="img/main.svg" alt="Главное блюдо" />
+              <p>Главное блюдо</p>
+            </div>
+            <div class="lunch-dish">
+              <img src="img/drink.svg" alt="Напиток" />
+              <p>Напиток</p>
+            </div>
+          </div>
+
+          <div class="lunch-option">
+            <div class="lunch-dish">
+              <img src="img/desert.png" alt="Десерт" />
+              <p>Десерт</p>
+              <p class="desert-note">(Можно добавить к любому заказу)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="soups">
+        <h2>Выберите суп</h2>
+        <div class="filters" id="soup-filters">
+          <button class="kind" data-kind="veg">вегетарианский</button>
+          <button class="kind" data-kind="meat">мясной</button>
+          <button class="kind" data-kind="fish">рыбный</button>
+        </div>
+        <div class="all_food" id="soups-list"></div>
+      </section>
+
+      <section id="starters">
+        <h2>Выберите салат или стартер</h2>
+        <div class="filters" id="starter-filters">
+          <button class="kind" data-kind="veg">вегетарианский</button>
+          <button class="kind" data-kind="meat">мясной</button>
+          <button class="kind" data-kind="fish">рыбный</button>
+        </div>
+        <div class="all_food" id="starters-list"></div>
+      </section>
+
+      <section id="main-dishes">
+        <h2>Выберите главное блюдо</h2>
+        <div class="filters" id="main-filters">
+          <button class="kind" data-kind="veg">вегетарианское</button>
+          <button class="kind" data-kind="meat">мясное</button>
+          <button class="kind" data-kind="fish">рыбное</button>
+        </div>
+        <div class="all_food" id="main-dishes-list"></div>
+      </section>
+
+      <section id="drinks">
+        <h2>Выберите напиток</h2>
+        <div class="filters" id="drink-filters">
+          <button class="kind" data-kind="hot">горячий</button>
+          <button class="kind" data-kind="cold">холодный</button>
+        </div>
+        <div class="all_food" id="drinks-list"></div>
+      </section>
+
+      <section id="deserts">
+        <h2>Выберите десерт</h2>
+        <div class="filters" id="desert-filters">
+          <button class="kind" data-kind="small">маленькая порция</button>
+          <button class="kind" data-kind="medium">средняя порция</button>
+          <button class="kind" data-kind="large">большая порция</button>
+        </div>
+        <div class="all_food" id="deserts-list"></div>
+      </section>
+      <section id="order-summary">
+        <div class="order-summary">
+          <p class="total-title">Итого: 1015₽</p>
+          <a id="order-button" href="order.html"><button class="checkout-button">Перейти к оформлению</button></a>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <p class="footer">
+        Позвонить нам: <a href="+7-900-000-00-00" class="footer">+7-900-000-00-00</a>
+      </p>
+    </footer>
+
+    <script src="scripts/list-item.js"></script>
+    <script src="scripts/filters.js"></script>
+  </body>
+</html>

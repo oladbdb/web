@@ -1,0 +1,296 @@
+.all_food {
+  display: grid;
+  grid: auto-flow 1fr / repeat(3, 1fr);
+  column-gap: 10px;
+}
+
+@media (max-width: 800px) {
+  .all_food {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .all_food {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  section > h2 {
+    text-align: center;
+  }
+}
+
+.dish {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  border-radius: 35px;
+  cursor: pointer;
+  filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+  background-color: rgb(243, 243, 243);
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  overflow: hidden; /* Добавлено для скрытия части изображения при увеличении */
+  position: relative; /* Для правильного позиционирования изображения */
+  transition: transform 0.3s ease; /* Плавный переход */
+}
+
+.dish:hover {
+  border: 2px solid tomato;
+}
+
+.dish.selected {
+  border: 2px solid tomato;
+}
+
+.dish > img {
+  width: 100%;
+  height: auto;
+  border-radius: 35px;
+  transition: transform 0.3s ease; /* Добавлено для плавного увеличения */
+}
+.dish:hover img {
+  transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+.dish.selected img {
+  transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+.name {
+  font-size: 20px;
+  
+  transition: all 0.3s ease;
+}
+.dish:hover .name {
+  font-size: 22px;
+}
+
+.dish.selected .name {
+  font-size: 22px;
+}
+
+.weight {
+  font-size: 18px;
+  
+  transition: all 0.3s ease;
+}
+.dish:hover .weight {
+  color: #707070;
+}
+
+.dish.selected .weight {
+  color: #707070;
+}
+
+.dish > button {
+  border: none;
+  background-color: #f1eee9;
+  font-family: 'Tektur', sans-serif;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1px;
+  
+  transition: all 0.3s ease;
+}
+
+.dish:hover button {
+  background-color: tomato;
+}
+
+.dish.selected button {
+  background-color: tomato;
+}
+
+.dish > button:active {
+  background-color: rgb(243, 243, 243);
+}
+
+
+
+
+
+#order-summary {
+  position: sticky;
+  bottom: 0; 
+  z-index: 1000; 
+  background-color: rgba(243, 243, 243, 0.658); 
+  box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+  
+  border-radius: 0px;
+}
+
+.order-summary {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content:space-between;
+}
+
+.total-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.total-price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #363636;
+  margin: 10px 0;
+}
+
+.checkout-button {
+  background-color: #f1eee9;
+  color: tomato;
+  border: 1px solid tomato;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkout-button:hover {
+  background-color: tomato;
+  color: #363636;
+}
+
+.checkout-button:active {
+  background-color: rgb(243, 243, 243);
+}
+
+
+
+
+
+
+
+.order-f {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 20px auto;
+}
+.order {
+  display: flex;
+  width: 100%;
+  max-width: 30%;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 35px;
+  filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+  background-color: rgb(243, 243, 243);
+}
+
+a.disabled {
+  pointer-events: none;
+}
+
+.input-title,
+.nothing {
+  font-family: 'Tektur', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  color: #363636;
+}
+
+.dish-title,
+.total {
+  font-family: 'Tektur', sans-serif;
+  
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: #363636;
+  margin-top: 0px;
+}
+.order > a {
+  text-align: center;
+  font-family: 'Tektur', sans-serif;
+  font-size: 24px;
+  color: #363636;
+}
+
+
+option {
+  font-family: 'Tektur', sans-serif;
+  font-size: 16px;
+  color: #363636;
+}
+
+.kind {
+  font-family: 'Tektur', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: tomato;
+  background-color: rgb(243, 243, 243);
+  margin-bottom: 10px;
+  margin-top: 0px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 0px;
+  cursor: pointer;
+  
+  transition: all 0.3s ease;
+}
+
+.kind:active{
+  background-color: tomato;
+  color: rgb(243, 243, 243);
+}
+
+.kind.selected{
+  background-color: tomato;
+  color: rgb(243, 243, 243);
+}
+
+
+
+.lunch-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.lunch-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.lunch-dish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lunch-dish img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.lunch-dish img:hover {
+  transform: translateY(-5px) scale(1.05); 
+}
+
+.lunch-dish p {
+  margin: 4px 0;
+}
+
+.desert-note {
+  font-size: 20px;
+  color: #666;
+}
+
